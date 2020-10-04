@@ -1,0 +1,14 @@
+{
+	"name": "Filestash",
+	"dockerFile": "Dockerfile",
+	"runArgs": [
+		"--network",
+		"host"
+	],
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"extensions": [
+		"golang.go"
+	]
+}
