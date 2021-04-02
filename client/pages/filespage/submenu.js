@@ -140,6 +140,15 @@ class SubmenuComponent extends React.Component {
                         </NgIf>
                         <NgIf
                             className="button-download"
+                            cond={this.props.selected.length == 0}
+                            type="inline"
+                            onMouseDown={this.onDownload.bind(this, [this.props.path])}>
+                            <ReactCSSTransitionGroup transitionName="submenuwithSelection" transitionLeave={false} transitionEnter={false} transitionAppear={true} transitionAppearTimeout={10000}>
+                                <span>{ t("Download") }</span>
+                            </ReactCSSTransitionGroup>
+                        </NgIf>
+                        <NgIf
+                            className="button-download"
                             cond={this.props.selected.length > 0}
                             type="inline"
                             onMouseDown={this.onDownload.bind(this, this.props.selected)}>
